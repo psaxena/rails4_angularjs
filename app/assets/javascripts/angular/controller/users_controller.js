@@ -91,7 +91,7 @@ myApp.controller("UserAddCtr", ['$scope', '$resource', 'Users', '$location', fun
 myApp.config([
   '$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	
-	  $locationProvider.hashPrefix('');
+	 // $locationProvider.hashPrefix('');
     $routeProvider.when('/users',{
       templateUrl: '/templates/users/index.html',
       controller: 'UserListCtr'
@@ -109,6 +109,6 @@ myApp.config([
     });
   }
 ]);
-myApp.config(['$locationProvider', function($locationProvider) {
-	  $locationProvider.hashPrefix('');
-	}])
+//myApp.config(['$locationProvider', function($locationProvider) {
+//	  $locationProvider.hashPrefix('');
+//	}])
