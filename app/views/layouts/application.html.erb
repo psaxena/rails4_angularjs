@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html ng-app="myapplication">
-<head>
-  <title>Rails4CrudWithAngularjs</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <div class="container" ng-view>
-    <%= yield %>
-  </div>
+	<head>
+		<title>Rails 4 and angular samples</title>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		Write some text in textbox:
+		<input type="text" ng-model="sometext" />
 
-</body>
+		<h1>Hello {{ sometext }}</h1>
+
+		<h4>Uppercase: {{ sometext | uppercase }}</h4>
+		<h4>Lowercase: {{ sometext | lowercase }}</h4>
+
+		<div >
+			Email:-
+			<input type="text" ng-model="newcontact" />
+
+
+			<button ng-click="add()">
+				Add
+			</button>
+			<h2>Contacts</h2>
+			<ul>
+				<li>pooja email</li>
+				<li ng-repeat="contact in contacts">
+					{{contact}}
+				</li>
+			</ul>
+
+		</div>
+		<div class="container" ng-view>
+			<%= yield %>
+		</div>
+
+	</body>
 </html>

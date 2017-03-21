@@ -86,6 +86,15 @@ myApp.controller("UserAddCtr", ['$scope', '$resource', 'Users', '$location', fun
 }]);
 
 
+myApp.controller("ContactController", ['$scope', function($scope) {
+	$scope.contacts = ["hi@email.com", "hello@email.com"];
+	$scope.add = function() {
+    	$scope.contacts.push($scope.newcontact);
+    	$scope.newcontact = "";
+    }
+
+}]);
+
 
 //Routes
 myApp.config([
