@@ -94,6 +94,18 @@
 						ClickMe!
 					</button></td>
 				</tr>
+
+				<tr>
+					<td>
+					<p>
+						You Selected :- {{selectedcar}}
+					</p></td>
+					<td>
+					<select ng-model="selectedcar">
+						<option ng-repeat="car in cars" value={{car.model}}>{{car.model}}</option>
+					</select></td>
+				</tr>
+
 			</table>
 		</div>
 	</div>
