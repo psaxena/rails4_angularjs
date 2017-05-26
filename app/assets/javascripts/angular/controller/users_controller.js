@@ -114,6 +114,10 @@ myApp.config([
       templateUrl: '/templates/users/edit.html',
       controller: "UserUpdateCtr"
     });
+    $routeProvider.when('/sampleTry', {
+      templateUrl: '/templates/sampleTry.html',
+      controller: "ContactController"
+    });
     $routeProvider.otherwise({
       redirectTo: '/users'
     });

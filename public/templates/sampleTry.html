@@ -1,0 +1,46 @@
+
+
+<br/>
+<div ng-controller="ContactController">
+	<div class="row">
+		<div class="col-md-12">
+			Write some text in textbox:
+			<input type="text" ng-model="sometext" />
+
+			<h1>Hello {{ sometext }}</h1>
+
+			<h4>Uppercase: {{ sometext | uppercase }}</h4>
+			<h4>Lowercase: {{ sometext | lowercase }}</h4>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<form>
+				<label>Name</label>
+				<input type="text" name="name" ng-model="newcontact.name" />
+				<label>Email</label>
+				<input type="text" name="email" ng-model="newcontact.email" />
+				<label>Phone</label>
+				<input type="text" name="phone" ng-model="newcontact.phone" />
+
+				<button ng-click="add()">
+					Add New Contact
+				</button>
+			</form>
+
+			<table class="table table-striped">
+				<th>Name</th>
+				<th>Email</th>
+				<th>Phone</th>
+				<tr ng-repeat="contact in contacts">
+					<td>{{contact.name}}</td>
+					<td>{{contact.email}}</td>
+					<td>{{contact.phone}}</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+<a class="btn btn-primary" href="#!/users">Back</a>

@@ -7,50 +7,6 @@
 		<%= csrf_meta_tags %>
 	</head>
 	<body>
-		Write some text in textbox:
-		<input type="text" ng-model="sometext" />
-
-		<h1>Hello {{ sometext }}</h1>
-
-		<h4>Uppercase: {{ sometext | uppercase }}</h4>
-		<h4>Lowercase: {{ sometext | lowercase }}</h4>
-
-		<div ng-controller="ContactController">
-			<form>
-				<label>Name</label>
-				<input type="text" name="name" ng-model="newcontact.name" />
-				<label>Email</label>
-				<input type="text" name="email" ng-model="newcontact.email" />
-				<label>Phone</label>
-				<input type="text" name="phone" ng-model="newcontact.phone" />
-
-				<button ng-click="add()">Add New Contact</button>
-			</form>
-
-			<table class="table table-striped">
-				<th>Name</th>
-				<th>Email</th>
-				<th>Phone</th>
-				<tr ng-repeat="contact in contacts">
-					<td>{{contact.name}}</td>
-					<td>{{contact.email}}</td>
-					<td>{{contact.phone}}</td>
-				</tr>
-			</table>
-			<!-- Email:-
-			<input type="text" ng-model="newcontact" />
-
-			<button ng-click="add()">
-				Add
-			</button>
-			<h2>Contacts</h2>
-			<ul>
-				<li ng-repeat="contact in contacts">
-					{{contact}}
-				</li>
-			</ul> -->
-
-		</div>
 		<div class="container" ng-view>
 			<%= yield %>
 		</div>
