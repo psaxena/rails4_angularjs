@@ -87,7 +87,8 @@ myApp.controller("UserAddCtr", ['$scope', '$resource', 'Users', '$location', fun
 
 
 myApp.controller("ContactController", ['$scope', function($scope) {
-	$scope.contacts = ["hi@email.com", "hello@email.com"];
+//	$scope.contacts = ["hi@email.com", "hello@email.com"];
+	$scope.contacts = [{"name":"Pooja", "email":"hi@email.com", "phone":"hello@email.com"}];
 	$scope.add = function() {
     	$scope.contacts.push($scope.newcontact);
     	$scope.newcontact = "";
