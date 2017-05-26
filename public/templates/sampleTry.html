@@ -13,20 +13,29 @@
 	</div>
 
 	<div class="row">
-		<div class="col-md-12">
-			<form>
+		<form>
+			<div class="col-md-3">
 				<label>Name</label>
 				<input type="text" name="name" ng-model="newcontact.name" />
+			</div>
+			<div class="col-md-3">
 				<label>Email</label>
 				<input type="text" name="email" ng-model="newcontact.email" />
+			</div>
+			<div class="col-md-3">
 				<label>Phone</label>
 				<input type="text" name="phone" ng-model="newcontact.phone" />
+			</div>
+			<div class="col-md-3">
 
 				<button ng-click="add()">
 					Add New Contact
 				</button>
-			</form>
-
+			</div>
+		</form>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
 			<table class="table table-striped">
 				<th>Name</th>
 				<th>Email</th>
